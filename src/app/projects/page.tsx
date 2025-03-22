@@ -1,7 +1,14 @@
+import Hero from '@/components/hero';
+import projectImg from '/public/images/projects.jpg';
+
 export default function Project() {
   return (
     <div>
-      <h1>PROJECTS</h1>
+      <Hero
+        imgData={projectImg}
+        imgAlt="background"
+        title="Projects Page"
+      />
     </div>
   );
 }

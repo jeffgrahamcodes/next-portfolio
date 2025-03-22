@@ -1,7 +1,14 @@
+import Hero from '@/components/hero';
+import aboutImg from '/public/images/about.jpg';
+
 export default function About() {
   return (
     <div>
-      <h1>ABOUT</h1>
+      <Hero
+        imgData={aboutImg}
+        imgAlt="background"
+        title="About Page"
+      />
     </div>
   );
 }

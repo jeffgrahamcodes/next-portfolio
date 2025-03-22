@@ -1,7 +1,14 @@
+import Hero from '@/components/hero';
+import contactImg from '/public/images/contact.jpg';
+
 export default function Contact() {
   return (
     <div>
-      <h1>CONTACT</h1>
+      <Hero
+        imgData={contactImg}
+        imgAlt="background"
+        title="Contact Page"
+      />
     </div>
   );
 }
