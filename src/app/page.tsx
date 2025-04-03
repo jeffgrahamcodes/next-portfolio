@@ -14,7 +14,7 @@ export default function Home() {
         </p>
         <a
           href="#projects"
-          className="inline-block px-6 py-3 font-semibold text-white rounded-md bg-gradient-to-r from-red-600 via-red-500 to-pink-500 shadow-[0_0_12px_rgba(255,91,91,0.6)] hover:shadow-[0_0_24px_rgba(255,91,91,0.9)] transition duration-300"
+          className="inline-block px-6 py-3 font-semibold text-white rounded-md bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 shadow-[0_0_12px_rgba(0,191,255,0.4)] hover:shadow-[0_0_24px_rgba(0,191,255,0.8)] transition duration-300"
         >
           View My Work
         </a>
