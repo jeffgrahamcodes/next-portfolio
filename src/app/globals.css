@@ -6,12 +6,12 @@
   initial-value: 0deg;
 }
 
-@theme {
-  --animate-rotate-border: border-rotate 3s linear infinite;
-
-  @keyframes border-rotate {
-    to {
-      --border-angle: 360deg;
-    }
+@keyframes border-rotate {
+  to {
+    --border-angle: 360deg;
   }
+}
+
+.animate-rotate-border {
+  animation: border-rotate 3s linear infinite;
 }
