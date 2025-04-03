@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jeff Graham – Developer Portfolio
 
-## Getting Started
+This is the codebase behind [jeffgraham.codes](https://www.jeffgraham.codes) — a minimalist, component-driven developer portfolio built with **Next.js**, **TypeScript**, and **Tailwind CSS**. It’s designed to showcase full-stack projects, highlight technical strengths, and provide a clean, modern user experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- Branded monogram with animated border (`<JG />`)
+<!-- - Light/dark mode support (theme-aware) -->
+- Modular layout with reusable sections (`Hero`, `ProjectCard`, `TechStack`, etc.)
+- Fully responsive on all screen sizes
+- Projects dynamically displayed with icons + links
+- Fast, static-generated pages via Next.js
+- Styled with Tailwind CSS + some MUI components
+
+---
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS 4**
+- **React Icons** (tech stack icons)
+- **MUI (Material UI)** – selective use for layout or accessibility
+- **Vercel** – deployed and hosted live
+
+---
+
+## Live Site
+
+[https://www.jeffgraham.codes](https://www.jeffgraham.codes)
+
+---
+
+## Folder Structure (Simplified)
+
+```
+src/
+├── app/
+│   ├── about/
+│   │   └── page.tsx          # About section route
+│   ├── contact/
+│   │   └── page.tsx          # Contact form/page route
+│   ├── projects/
+│   │   └── page.tsx          # Project portfolio route
+│   ├── globals.css           # Global CSS and base styles
+│   ├── layout.tsx            # Shared layout component
+│   └── page.tsx              # Homepage
+├── components/
+│   ├── AboutPreview.tsx      # Summary about the developer
+│   ├── ContactCTA.tsx        # Contact call-to-action
+│   ├── FeaturedProjects.tsx  # Featured work/projects section
+│   ├── ProjectCard.tsx       # Individual project card
+│   ├── TechStack.tsx         # Technologies & tools used
+│   ├── hero.tsx              # Hero/banner section
+│   └── header.tsx            # Navigation/header bar
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Featured Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Hall-Waze** – A full-stack student hall pass tracker (React + Firebase)
+- **Microblog** – A minimalist blog app using Flask + MongoDB
 
-## Learn More
+Each project is loaded via a `ProjectCard` component and linked to GitHub + live demos.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git clone https://github.com/jeffgrahamcodes/portfolio.git
+cd portfolio
 
-## Deploy on Vercel
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Access the site at: http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deployment
+
+This project is deployed on Vercel with automatic CI from GitHub.
+
+To build manually:
+
+```
+npm run build
+npm start
+```
+
+---
+
+## Future Improvements
+
+- Add scroll-based animations (Framer Motion)
+- Filter or sort projects by stack or type
+- Add blog section powered by MDX or Notion API
+- Dynamic Open Graph images for project previews
+- Lighthouse optimization for mobile performance
+
+---
+
+## Created By
+
+**Jeff Graham**
+Full-Stack Cloud Developer & Educator
+[LinkedIn](https://linkedin.com/in/jeffgrahamcodes)
+[GitHub](https://github.com/jeffgrahamcodes)
+[jeffgraham.codes](https://jeffgraham.codes)
