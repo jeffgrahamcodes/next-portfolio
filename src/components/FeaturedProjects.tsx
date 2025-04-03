@@ -1,46 +1,44 @@
-// components/FeaturedProjects.tsx
+'use client';
+
+import ProjectCard from '@/components/ProjectCard';
+import hallWazePreview from '/public/images/hall-waze-preview.jpg';
+import {
+  SiFirebase,
+  SiReact,
+  SiMui,
+  SiChartdotjs,
+} from 'react-icons/si';
+
 export default function FeaturedProjects() {
   return (
-    <section
-      id="projects"
-      className="bg-gray-900 text-white py-16 px-6"
-    >
+    <section className="py-16 px-6 bg-gray-900 text-white">
       <h3 className="text-2xl font-bold mb-8 text-center">
         Featured Projects
       </h3>
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h4 className="text-xl font-semibold mb-2">CodeCraft</h4>
-          <p className="text-gray-400 mb-4">
-            A modular code snippet manager built with Next.js and
-            MongoDB.
-          </p>
-          <a
-            href="/projects/codecraft"
-            className="text-cyan-400 hover:underline"
-          >
-            View Project →
-          </a>
-        </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-          <h4 className="text-xl font-semibold mb-2">DevBoard</h4>
-          <p className="text-gray-400 mb-4">
-            A real-time task board app with Markdown support and
-            drag-and-drop.
-          </p>
-          <a
-            href="/projects/devboard"
-            className="text-cyan-400 hover:underline"
-          >
-            View Project →
-          </a>
-        </div>
+      <div className="flex flex-wrap justify-center gap-10">
+        <ProjectCard
+          title="Hall-Waze"
+          description="A full-stack hall pass management system built for schools to track student movement, enforce pass policies, and visualize data."
+          imgSrc={hallWazePreview.src}
+          liveUrl="https://hall-waze.com"
+          githubUrl="https://github.com/jeffgrahamcodes/student-tracking-app"
+          techIcons={[
+            <SiReact key="react" />,
+            <SiFirebase key="firebase" />,
+            <SiMui key="mui" />,
+            <SiChartdotjs key="chartjs" />,
+          ]}
+        />
+        {/* Add more ProjectCard components here if you want to feature more */}
       </div>
 
-      <div className="text-center mt-10">
-        <a href="/projects" className="text-cyan-400 hover:underline">
-          See all projects
+      <div className="mt-10 text-center">
+        <a
+          href="/projects"
+          className="inline-block text-cyan-400 hover:underline font-medium"
+        >
+          See All Projects →
         </a>
       </div>
     </section>
