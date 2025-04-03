@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+/* Animate conic gradient border */
 @property --border-angle {
   syntax: '<angle>';
   inherits: false;
@@ -14,4 +15,15 @@
 
 .animate-rotate-border {
   animation: border-rotate 3s linear infinite;
+}
+
+/* Custom class to apply the animated conic background */
+.custom-border-gradient {
+  background: conic-gradient(
+    from var(--border-angle),
+    black,
+    #3b82f6,
+    black
+  );
+  border-radius: 0.5rem; /* Matches rounded-lg */
 }

@@ -3,20 +3,20 @@ import { Space_Grotesk } from 'next/font/google';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  // Optionally specify weights, default is 400
-  // weights: ['400', '700'],
-  display: 'swap', // Recommended for performance
+  display: 'swap',
 });
 
 export default function Header() {
   return (
-    <div className="w-full absolute text-white z-10">
+    <div className="w-full fixed top-0 z-50 text-white">
       <nav className="container relative flex flex-wrap items-center justify-between mx-auto p-8">
         <Link className="font-bold text-3xl" href="/">
-          <div className="w-full animate-rotate-border max-w-sm rounded-lg bg-conic/[from_var(--border-angle)] from-black via-blue-500 to-black p-px">
+          <div className="w-full animate-rotate-border max-w-sm rounded-lg custom-border-gradient p-px">
             <div
               className={`px-9 py-3 rounded-lg bg-neutral-900 ${spaceGrotesk.className}`}
-            >{`<JG />`}</div>
+            >
+              {`<JG />`}
+            </div>
           </div>
         </Link>
         <div className="space-x-4 text-xl">
