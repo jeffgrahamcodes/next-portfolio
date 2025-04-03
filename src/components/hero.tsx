@@ -5,13 +5,14 @@ import { ReactNode } from 'react';
 interface HeroProps {
   imgData: StaticImageData;
   imgAlt: string;
-  title?: string; // Make optional if you want to omit
+  title?: string;
   children?: ReactNode;
 }
 
 export default function Hero(props: HeroProps) {
   return (
-    <div className="relative h-screen text-white">
+    <div className="relative min-h-screen text-white flex items-center justify-center">
+      {/* Background Image */}
       <div className="absolute -z-10 inset-0">
         <Image
           src={props.imgData}
@@ -21,7 +22,9 @@ export default function Hero(props: HeroProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent"></div>
       </div>
-      <div className="pt-48 px-6 flex flex-col items-center text-center">
+
+      {/* Centered Content */}
+      <div className="flex flex-col items-center text-center px-6">
         {props.title && (
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             {props.title}
