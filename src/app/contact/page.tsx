@@ -16,8 +16,9 @@ export default function Contact() {
             Let’s Connect
           </h2>
           <p className="text-center text-lg">
-            Whether you're interested in collaborating, hiring, or
-            just saying hi — I'm always open to great conversations.
+            Whether you&apos;re interested in collaborating, hiring,
+            or just saying hi — I&apos;m always open to great
+            conversations.
           </p>
 
           <div className="flex flex-col gap-6">

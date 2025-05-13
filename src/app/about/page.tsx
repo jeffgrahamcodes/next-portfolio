@@ -13,7 +13,8 @@ export default function About() {
           </h1>
 
           <p className="text-lg leading-8">
-            I'm <span className="font-semibold">Jeff Graham</span>, a
+            I&apos;m{' '}
+            <span className="font-semibold">Jeff Graham</span>, a
             full-stack developer and lifelong educator based in the DC
             Metro area. I build cloud-native applications that solve
             real problems — especially for underrepresented
@@ -48,7 +49,7 @@ export default function About() {
               Why I Build
             </h2>
             <p>
-              I'm driven by impact. Tools like{' '}
+              I&apos;m driven by impact. Tools like{' '}
               <strong>LearnLift</strong> weren’t just technical
               challenges — they’re opportunities to empower students,
               especially those often overlooked by traditional
