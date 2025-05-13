@@ -2,7 +2,7 @@
 
 import ProjectCard from '@/components/ProjectCard';
 import hallWazePreview from '/public/images/hall-waze-preview.jpg';
-import microBlogPreview from '/public/images/microblog-preview.jpg';
+import learnLiftPreview from '/public/images/learnlift-preview.png';
 
 import {
   SiFirebase,
@@ -10,9 +10,9 @@ import {
   SiMui,
   SiChartdotjs,
   SiPython,
-  SiFlask,
-  SiMongodb,
-  SiHtml5,
+  SiFastapi,
+  SiOpenai,
+  SiNextdotjs,
 } from 'react-icons/si';
 
 export default function FeaturedProjects() {
@@ -23,6 +23,21 @@ export default function FeaturedProjects() {
       </h3>
 
       <div className="flex flex-wrap justify-center gap-10">
+        {/* LearnLift Card */}
+        <ProjectCard
+          title="LearnLift"
+          description="An AI-powered writing feedback platform helping students grow their skills through personalized coaching. Built with Next.js, FastAPI, and OpenAI."
+          imgSrc={learnLiftPreview.src}
+          liveUrl="https://learnlift.vercel.app"
+          githubUrl="https://github.com/jeffgrahamcodes/learnlift"
+          techIcons={[
+            <SiNextdotjs key="next" />,
+            <SiFastapi key="fastapi" />,
+            <SiOpenai key="openai" />,
+            <SiPython key="python" />,
+          ]}
+        />
+
         {/* Hall-Waze Card */}
         <ProjectCard
           title="Hall-Waze"
@@ -35,21 +50,6 @@ export default function FeaturedProjects() {
             <SiFirebase key="firebase" />,
             <SiMui key="mui" />,
             <SiChartdotjs key="chartjs" />,
-          ]}
-        />
-
-        {/* Microblog Card */}
-        <ProjectCard
-          title="Microblog"
-          description="A lightweight blogging app built with Flask and MongoDB, ideal for journaling and quick status updates."
-          imgSrc={microBlogPreview.src}
-          liveUrl="https://your-live-url.com"
-          githubUrl="https://github.com/jeffgrahamcodes/microblog"
-          techIcons={[
-            <SiPython key="python" />,
-            <SiFlask key="flask" />,
-            <SiMongodb key="mongodb" />,
-            <SiHtml5 key="html" />,
           ]}
         />
       </div>
