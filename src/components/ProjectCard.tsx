@@ -31,13 +31,18 @@ export default function ProjectCard({
         maxWidth: 345,
         backgroundColor: '#0f172a',
         color: 'white',
+        transition: 'transform 0.2s ease-in-out',
+        '&:hover': {
+          transform: 'scale(1.05)',
+          boxShadow: '0 10px 15px rgba(0,0,0,0.3)',
+        },
       }}
     >
       <CardMedia
         component="img"
         height="180"
         image={imgSrc}
-        alt={`${title} preview`}
+        className="rounded-md border border-white"
       />
       <CardContent>
         <Typography variant="h6" gutterBottom>
